@@ -25,7 +25,7 @@ $data = json_decode($json_data, true);
 $username = $data['username'];
 $password = $data['password'];
 if(authenticate($username, $password))
-  echo '{"valid":"valid"}';
+	echo '{"valid":"valid"}';
 else{
 	$ch = curl_init();
 
