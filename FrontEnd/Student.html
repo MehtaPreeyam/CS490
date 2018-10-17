@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Student Page</title>
+    <style>
+        button {
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            font-size: 30px;
+        }
+        
+        button:hover {
+            border: 2px solid yellow;
+            color: yellow;
+            background-color: black;
+            font-size: 30px;
+        }
+    </style>
+</head>
+ 
+<body>
+  <div>
+   <head> Welcome Student! </head>
+   </div>
+    <button onclick="onClick(this)" id="button1">Take Test</button>
+    <button onclick="onClick(this)" id="button2">View Test Score</button>
+</body>
+<script>
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+    function onClick(x) {
+        var username = "";
+        username = getUrlParameter('username');
+        if (x.id === 'button1') window.location.href = 'TakeTest.html?username='+username;
+        if (x.id === 'button2') window.location.href = 'ViewScore.html?username='+username;
+    }
+</script>
+ 
+</html>

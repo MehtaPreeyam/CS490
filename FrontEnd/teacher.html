@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Instructor Page</title>
+    <style>
+      head {
+        text-align: center;
+      }
+      body {
+        background-color: #F3EBF6;
+        font-family: 'Ubuntu', sans-serif;
+      }
+        button {
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            font-size: 30px;
+        }
+        
+        button:hover {
+            border: 2px solid yellow;
+            color: yellow;
+            background-color: black;
+            font-size: 30px;
+        }
+    </style>
+</head>
+ 
+<body>
+  <div>
+   <head> Welcome Instructor! </head>
+   </div>
+    <button onclick="onClick(this)" id="button1">Create Test</button>
+    <button onclick="onClick(this)" id="button2">Add Question</button>
+    <button onclick="onClick(this)" id="button3">View/Edit Exam Scores</button>
+</body>
+<script>
+    function onClick(x) {
+        if (x.id === 'button1') window.location.href = 'CreateTest.html';
+        if (x.id === 'button2') window.location.href = 'AddQ.html';
+        if (x.id === 'button3') window.location.href = 'EditExam.html';
+    }
+</script>
+ 
+</html>

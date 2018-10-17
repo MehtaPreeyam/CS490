@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+body {
+        background-color: #F3EBF6;
+        font-family: 'Ubuntu', sans-serif;
+    }
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<script src="CreateTest.js"></script>
+<body onload="getQuestions()">
+
+<h3>Create Test</h3>
+<div id="AllQuestions">
+<label for="AllQuestions">Current Questions in Question Bank:</label>
+</div>
+<div>
+  <form onsubmit="return false">
+   
+   <label for="Points">Question 1 Points</label>
+    <input type="text" id="Q1pts" placeholder="Enter Q1 Points Here">
+    
+    <label for="Q1Difficulty">Q1 Difficulty</label>
+    <select id="Q1Difficulty" name="Difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <label for="Q1Topic">Q1 Topic</label>
+    <select id="Q1Topic" name="Topic">
+      <option value="Lists">Lists</option>
+      <option value="Dictionaries">Dictionary</option>
+      <option value="Files">Files</option>
+      <option value="Strings">Strings</option>
+      <option value="Turtle">Turtle</option>
+    </select>
+
+    <label for="Q1Restraints">Q1 Restraints</label>
+    <select id="Q1Restraints" name="Restraints">
+      <option value="For Loop">For Loop</option>
+      <option value="If Statement">If Statement</option>
+      <option value="Helper Function">Helper Function</option>
+      <option value="While Loop">While Loop</option>
+    </select>
+    
+   <label for="Points">Question 2 Points</label>
+    <input type="text" id="Q2pts" placeholder="Enter Q2 Points Here">
+    
+    <label for="Q2Difficulty">Q2 Difficulty</label>
+    <select id="Q2Difficulty" name="Difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <label for="Q2Topic">Q2 Topic</label>
+    <select id="Q2Topic" name="Topic">
+      <option value="Lists">Lists</option>
+      <option value="Dictionaries">Dictionary</option>
+      <option value="Files">Files</option>
+      <option value="Strings">Strings</option>
+      <option value="Turtle">Turtle</option>
+    </select>
+
+    <label for="Q2Restraints">Q2 Restraints</label>
+    <select id="Q2Restraints" name="Restraints">
+      <option value="For Loop">For Loop</option>
+      <option value="If Statement">If Statement</option>
+      <option value="Helper Function">Helper Function</option>
+      <option value="While Loop">While Loop</option>
+    </select>
+    
+       <label for="Points">Question 3 Points</label>
+    <input type="text" id="Q3pts" placeholder="Enter Q3 Points Here">
+    
+    <label for="Q3Difficulty">Q3 Difficulty</label>
+    <select id="Q3Difficulty" name="Difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <label for="Q3Topic">Q3 Topic</label>
+    <select id="Q3Topic" name="Topic">
+      <option value="Lists">Lists</option>
+      <option value="Dictionaries">Dictionary</option>
+      <option value="Files">Files</option>
+      <option value="Strings">Strings</option>
+      <option value="Turtle">Turtle</option>
+    </select>
+
+    <label for="Q3Restraints">Q3 Restraints</label>
+    <select id="Q3Restraints" name="Restraints">
+      <option value="For Loop">For Loop</option>
+      <option value="If Statement">If Statement</option>
+      <option value="Helper Function">Helper Function</option>
+      <option value="While Loop">While Loop</option>
+    </select>
+  
+    <input onclick="CreateTest()" type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

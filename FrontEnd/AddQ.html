@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+body {
+        background-color: #F3EBF6;
+        font-family: 'Ubuntu', sans-serif;
+    }
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<script src="AddQ.js"></script>
+<body onload="getQuestions()">
+
+<h3>Add a question to the bank</h3>
+<div id="AllQuestions">
+<label for="AllQuestions">Current Questions in Question Bank:</label>
+</div>
+<div>
+  <form onsubmit="return false">
+   
+   <label for="Description">Question Description</label>
+   <textarea name="text" id="Description" style="width:96%;padding:2%;height:180px;font:15px/15px sans-serif;color:black;">Enter Question Description Here</textarea>
+   
+   <label for="Points">Question Points</label>
+    <input type="text" id="pts" placeholder="Enter Question Points Here">
+    
+    <label for="Q1Difficulty">Difficulty</label>
+    <select id="Difficulty" name="Difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <label for="Topic">Topic</label>
+    <select id="Topic" name="Topic">
+      <option value="Lists">Lists</option>
+      <option value="Dictionaries">Dictionary</option>
+      <option value="Files">Files</option>
+      <option value="Strings">Strings</option>
+    </select>
+
+    <label for="Restraints">Restraints</label>
+    <select id="Restraints" name="Restraints">
+      <option value="For Loop">For Loop</option>
+      <option value="If Statement">If Statement</option>
+      <option value="Helper Function">Helper Function</option>
+      <option value="While Loop">While Loop</option>
+    </select>
+    
+    <label for="TestCase1Input">TestCase 1 input</label>
+    <input type="text" id="TestCase1Input" placeholder="Enter TestCase 1 input here">
+    
+    <label for="Points">TestCase 1 output</label>
+    <input type="text" id="TestCase1Output" placeholder="Enter TestCase 1 output here">
+    
+    <label for="Points">TestCase 2 input</label>
+    <input type="text" id="TestCase2Input" placeholder="Enter TestCase 2 input here">
+    
+    <label for="Points">TestCase 2 output</label>
+    <input type="text" id="TestCase2Output" placeholder="Enter TestCase 2 output here">
+  
+    <input onclick="AddQ()" type="submit" value="Submit">
+    <input onclick="ret()" type="submit" value="Return">
+  </form>
+</div>
+
+</body>
+</html>
